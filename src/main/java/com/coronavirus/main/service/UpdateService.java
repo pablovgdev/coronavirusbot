@@ -1,5 +1,7 @@
 package com.coronavirus.main.service;
 
+import java.util.ArrayList;
+
 import com.coronavirus.main.model.update.Update;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,24 +12,35 @@ public class UpdateService {
 	@Autowired
 	TelegramService telegramService;
 
+	@Autowired
+	MessageService messageService;
+
 	public void handleUpdate(Update update) {
+		ArrayList<String> messages = new ArrayList<String>();
+
 		if (this.isCommand(update)) {
-			if (update.message.text == "/global") {
-				this.telegramService.sendMessage(update.message.chat.id, "GLOBAL");
-			} else if (update.message.text == "/historico") {
-				this.telegramService.sendMessage(update.message.chat.id, "HISTORICO");
-			} else if (update.message.text == "/actual") {
-				this.telegramService.sendMessage(update.message.chat.id, "ACTUAL");
+			switch (update.message.text) {
+				case "/global":
+					messages = messageService.getSummaryMessage();
+					break;
+				case "/historico":
+					messages = messageService.getRecordsSpainMessage();
+					break;
+				case "/actual":
+					messages = messageService.getActualSpainMessage();
+					break;
 			}
 		} else {
-			this.telegramService.sendMessage(update.message.chat.id, "Usa \"/\" para ver los comandos disponibles");
+			messages.add("Usa \"/\" para ver los comandos disponibles");
+		}
+
+		for (String message : messages) {
+			this.telegramService.sendMessage(update.message.chat.id, message);
 		}
 	}
 
 	public boolean isCommand(Update update) {
-		System.out.println(update.message.entities[0].type);
-
-		if (update.message.entities != null && update.message.entities[0].type == "bot_command") {
+		if (update.message.entities != null && update.message.entities[0].type.equals("bot_command")) {
 			return true;
 		} else {
 			return false;

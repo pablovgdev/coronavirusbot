@@ -1,6 +1,7 @@
 package com.coronavirus.main.service;
 
-import java.util.Map;
+import com.coronavirus.main.model.stats.Record;
+import com.coronavirus.main.model.stats.Summary;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +19,11 @@ public class StatsService {
 		return this.restTemplate.getForObject(this.baseUrl, String.class);
 	}
 
-	public Map getSummary() {
-		return this.restTemplate.getForObject(this.baseUrl + "/summary", Map.class);
+	public Summary getSummary() {
+		return this.restTemplate.getForObject(this.baseUrl + "/summary", Summary.class);
+	}
+
+	public Record[] getRecordsSpain() {
+		return this.restTemplate.getForObject(this.baseUrl + "/dayone/country/spain", Record[].class);
 	}
 }
