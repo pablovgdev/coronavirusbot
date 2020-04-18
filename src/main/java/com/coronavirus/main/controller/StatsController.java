@@ -23,8 +23,7 @@ public class StatsController {
 		try {
 			return mapper.writeValueAsString(statsService.getSummary());
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			return null;
+			return e.getMessage();
 		}
 	}
 
@@ -34,8 +33,7 @@ public class StatsController {
 		try {
 			return mapper.writeValueAsString(statsService.getRecordsSpain());
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			return null;
+			return e.getMessage();
 		}
 	}
 }

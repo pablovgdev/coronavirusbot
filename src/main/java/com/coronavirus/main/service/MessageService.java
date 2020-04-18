@@ -18,15 +18,15 @@ public class MessageService {
 		ArrayList<String> messages = new ArrayList<String>();
 		Global global = statsService.getSummary().getGlobal();
 
-		String infected = new StringBuilder().append("😷 Infectados:").append("\n").append("- Recientes: ")
+		String infected = new StringBuilder().append("Infectados 😷").append("\n").append("- Recientes: ")
 				.append(global.getNewConfirmed()).append("\n").append("- Totales: ").append(global.getTotalConfirmed())
 				.toString();
 
-		String deaths = new StringBuilder().append("💀 Muertes:").append("\n").append("- Recientes: ")
+		String deaths = new StringBuilder().append("Muertes 💀").append("\n").append("- Recientes: ")
 				.append(global.getNewDeaths()).append("\n").append("- Totales: ").append(global.getTotalDeaths())
 				.toString();
 
-		String recovered = new StringBuilder().append("😊 Recuperados:").append("\n").append("- Recientes: ")
+		String recovered = new StringBuilder().append("Recuperados 😊").append("\n").append("- Recientes: ")
 				.append(global.getNewRecovered()).append("\n").append("- Totales: ").append(global.getTotalRecovered())
 				.toString();
 
