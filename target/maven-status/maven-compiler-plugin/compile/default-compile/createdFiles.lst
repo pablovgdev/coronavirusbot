@@ -1,0 +1,15 @@
+com/coronavirus/main/service/TelegramService.class
+com/coronavirus/main/service/UpdateService.class
+com/coronavirus/main/model/stats/Global.class
+com/coronavirus/main/service/MessageService.class
+com/coronavirus/main/model/update/Update.class
+com/coronavirus/main/service/StatsService.class
+com/coronavirus/main/model/stats/Record.class
+com/coronavirus/main/model/update/User.class
+com/coronavirus/main/controller/UpdateController.class
+com/coronavirus/main/controller/StatsController.class
+com/coronavirus/main/model/update/Entity.class
+com/coronavirus/main/model/update/Message.class
+com/coronavirus/main/model/stats/Summary.class
+com/coronavirus/main/Main.class
+com/coronavirus/main/model/update/Chat.class

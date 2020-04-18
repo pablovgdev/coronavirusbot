@@ -1,0 +1,15 @@
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/service/TelegramService.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/service/MessageService.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/service/UpdateService.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/stats/Global.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/stats/Record.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/update/Update.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/controller/UpdateController.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/update/Chat.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/controller/StatsController.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/update/User.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/update/Message.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/stats/Summary.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/model/update/Entity.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/Main.java
+/home/vforverdu/dev/java/coronavirus/main/src/main/java/com/coronavirus/main/service/StatsService.java
